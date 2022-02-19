@@ -7,16 +7,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 
-public class ICICI implements Bank
+public class SBI implements Bank
 {
 
-    public final String bankName="ICICI";
+    public final String bankName="SBI";
     public final float rateOfInterest=7;
     private int lastGeneratedAccountNumber=0;
     int transactionNumber=0;
     private LinkedHashMap<Integer,Account> accountList=null;
 
-    public ICICI()
+    public SBI()
     {
         lastGeneratedAccountNumber=12331211;
         transactionNumber=45678;
@@ -64,15 +64,15 @@ public class ICICI implements Bank
             accountBalance=0;
         }
 
-        Account iciciAccount=new Account("ICICI", accountType, accountNumber, name, accountBalance);
+        Account sbiAccount=new Account("SBI", accountType, accountNumber, name, accountBalance);
 
-        if(!iciciAccount.setAccountNumber(this.generateAccountNumber()))
+        if(!sbiAccount.setAccountNumber(this.generateAccountNumber()))
         {
             System.out.println("Cannot update account number");
             return false;
         }
-        this.accountList.put(iciciAccount.getAccountNumber(), iciciAccount);
-        System.out.println("\n"+this.accountList.get(iciciAccount.getAccountNumber()));
+        this.accountList.put(sbiAccount.getAccountNumber(), sbiAccount);
+        System.out.println("\n"+this.accountList.get(sbiAccount.getAccountNumber()));
         return true;
     }
 
@@ -101,7 +101,7 @@ public class ICICI implements Bank
     public boolean processTransaction(int accountNumber, int amount) throws IOException
     {
         Account account= this.accountList.get(accountNumber);
-        File file=new File("transactions//iciciTransactions.txt");
+        File file=new File("transactions//sbiTransactions.txt");
         SimpleDateFormat sdf= new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         FileWriter fileWriter=new FileWriter(file,true);
         if(!file.exists())

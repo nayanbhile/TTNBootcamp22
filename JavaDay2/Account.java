@@ -2,12 +2,13 @@ public class Account
 {
     String bankName;
     AccountType accountType;
-    String accountNumber;
+    int accountNumber;
     String accountHandler;
     int accountBalance;
+    String pin;
 
 
-    public Account(String bankName, AccountType accountType, String accountNumber, String accountHandler, int accountBalance)
+    public Account(String bankName, AccountType accountType, int accountNumber, String accountHandler, int accountBalance)
     {
         this.bankName= bankName;
         this.accountType= accountType;
@@ -25,7 +26,17 @@ public class Account
     {
         return this.accountType;
     }
-    public String getAccountNumber()
+    public boolean setAccountNumber(Integer accountNumber)
+    {
+        if(this.accountNumber==0)
+        {
+            this.accountNumber=accountNumber;
+            return true;
+        } 
+        return false;
+    }
+
+    public int getAccountNumber()
     {
         return this.accountNumber;
     }
@@ -42,6 +53,17 @@ public class Account
         return this.accountBalance;
     }
 
+    public boolean equals(Account acc) {
+        try
+        {
+            return this.accountNumber==acc.getAccountNumber();
+        }
+        catch(Exception e) 
+        {   
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
 
     @Override
     public String toString() {

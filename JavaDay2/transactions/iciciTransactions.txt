@@ -1,0 +1,26 @@
+
+:
+
+Transaction ID: 45679
+Time of Transaction: 19/02/2022 15:18:58
+Account Number: 12331211
+Amount withdrawn!
+Balance before transaction: 50000
+Balance after transaction: 49500
+Transaction status: SUCCESSFUL
+
+Transaction ID: 45680
+Time of Transaction: 19/02/2022 15:19:14
+Account Number: 12331211
+Amount deposited!
+Balance before transaction: 49500
+Balance after transaction: 50000
+Transaction status: SUCCESSFUL
+
+Transaction ID: 45680
+Time of Transaction: 19/02/2022 15:19:35
+Account Number: 12331211
+Amount withdrawn!
+Balance before transaction: 50000
+Balance after transaction: 50000
+Transaction status: FAILED
