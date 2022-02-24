@@ -8,13 +8,14 @@ class q1Thread1 implements Runnable
     @Override
     public void run() 
     {
+        System.out.println("q1Thread1: Thread1 got invoked at: "+ CurrentTime.getCurrentTime()); 
         try{
             Thread.sleep(1000);
         }catch(InterruptedException ie){
             ie.printStackTrace();
         }
         
-        System.out.println("q1Thread1: Thread1 got executed at: "+ CurrentTime.getCurrentTime());       
+        System.out.println("q1Thread1: Thread1 got executed successfully at: "+ CurrentTime.getCurrentTime());       
     }
 }
 
@@ -23,7 +24,8 @@ class q1Thread2 extends Thread
     @Override
     public void run() 
     {
-        System.out.println("q1Thread2: Thread2 got executed at: "+ CurrentTime.getCurrentTime());
+        System.out.println("q1Thread2: Thread2 got invoked at: "+ CurrentTime.getCurrentTime()); 
+        System.out.println("q1Thread2: Thread2 got executed successfully at: "+ CurrentTime.getCurrentTime());
     }
 }
 

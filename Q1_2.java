@@ -1,3 +1,5 @@
+// Explaining the usage of join()
+
 public class Q1_2 {
     public static void main(String gg[]) throws InterruptedException
     {   
